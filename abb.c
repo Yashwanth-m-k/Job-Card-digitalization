@@ -22,11 +22,11 @@ void user_detaile(Job_Card *job_card)
     strcpy(job_card->emp_file_name, "Abb_Info.csv");
 
     // Get user details
-    printf("Employee detail ->\nEnter the Name: ");
+    printf("Enter Your Name: ");
     scanf(" %[^\n]", job_card->name);
-    printf("Enter Employee ID: ");
+    printf("Enter Your ID: ");
     scanf("%d", &job_card->id);
-    printf("Enter Employee Department: ");
+    printf("Enter Your Department: ");
     scanf(" %[^\n]", job_card->department);
 
     // Open file in append mode to add new data at the end
@@ -77,7 +77,7 @@ void user_Inspect(Job_Card *job_card)
     int n = sizeof(arr) / sizeof(arr[0]);
 
     // Input characters into arr
-    printf("Enter 13 characters:\n");
+    
     for (int i = 0; i < n; i++) {
         printf("%s :",data[i]);
         scanf(" %c", &arr[i]); // Space before %c to ignore whitespace
