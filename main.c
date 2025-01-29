@@ -16,7 +16,7 @@ if(strcmp(str,"Employee")==0||strcmp(str,"employee")==0)
     user_detaile(&job_card);
     user_Inspect(&job_card);
 }
-else if(strcmp(str,"Supervisor")==0||strcmp(str,"employee")==0)
+else if(strcmp(str,"Supervisor")==0||strcmp(str,"supervisor")==0)
 {
    Supervisor(&job_card);
 }

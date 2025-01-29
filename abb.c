@@ -44,12 +44,12 @@ void user_detaile(Job_Card *job_card)
 
 }
 void Supervisor(Job_Card *job_card){
-     printf("Enter Password to Access Employee detile :");
+   L1:  printf("Enter Password to Access Employee detile :");
     scanf(" %[^\n]",job_card->password);
 
     if(strcmp(job_card->password,"11234")==0){
 
-        job_card->fpter= fopen(job_card->emp_file_name, "r");
+        job_card->fpter= fopen("Abb_Info.csv", "r");
     if (job_card->fpter == NULL) {
         printf("Error: Unable to open file.\n");
         
@@ -61,6 +61,10 @@ void Supervisor(Job_Card *job_card){
         {
             printf("%s",buffer);
         }
+    }
+    else{
+        printf("Wrong Passward,Enter Again \n");
+        goto L1;
     }
 }
 void user_Inspect(Job_Card *job_card)
@@ -90,9 +94,11 @@ void user_Inspect(Job_Card *job_card)
             }
         else if(i==4){fprintf(fptr,"STAGE 2 COU Frame Assembly\n");}
         else if(i==8){fprintf(fptr,"STAGE 3 PEBB Frame Assembly CHECK LIST\n");}
-        fprintf(fptr, "%s -> %c\n", data[i], arr[i]);
-    }
+        fprintf(fptr, "%-40s -> %c\n", data[i], arr[i]);
 
+        
+    }
+     
     fclose(fptr);
     printf("Data written to file successfully.\n");
 
