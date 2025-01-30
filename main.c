@@ -7,7 +7,7 @@ int main(){
 char str[11];
 
 strcpy(job_card.emp_file_name, "Abb_Info.txt");
-printf("  Login Has a-------------------------------- \nEmployee or Supervisor \n");
+printf("  Login has a\n-------------------------------- \nEmployee or Supervisor \n");
 scanf("%s",str);
 
 if(strcmp(str,"Employee")==0||strcmp(str,"employee")==0)
